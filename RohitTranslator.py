@@ -11,6 +11,6 @@ target_lang=st.selectbox("Choose language",list(languages.keys()))
 if st.button("Translate"):
     if sourceText:
         translation=translator.translate(sourceText,dest=languages[target_lang])
-        st.write(f"Translated Text: {translation}")
+        st.write(f"Translated Text: {translation.text}")
     else:
         st.write("Please enter your source text")
